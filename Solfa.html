@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOReMI SOlFÁ-móveis</title>
+  
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Stoke' rel='stylesheet'>
+
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+
+   
+</head>
+
+<body>
+    <header>
+        <address class="ender">
+            TV. La  Donna e Mobile 134 <br>
+               Tel: (21)21224-4881 <br>
+            <a href="mailto:contato@doremisolfa.com.br"> contato@doremisolfa.com.br</a>
+        </address>
+
+
+        <img src="Imagens/DoremisofaLogoTopo.png" alt="DoremisofaLogoTopo" class="imgLogo ">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Apresentação </a></li>
+            <li><a href="Doremi.html">Camas</a></li>
+            <li><a href="">Sofás</a></li>
+            <li><a href="Encomendas.html">Encomendas</a></li>
+
+        </ul>
+
+    </nav>
+
+
+    <section >
+        <h3 class="titulo">Seção SOlFÁ</h3>
+        <table class="TabSofa">
+            <tr>
+                <th class="titulo-tab" colspan="5">sofá e sófas-camas</th>
+            </tr>
+       <tr>
+           
+           <th class="linTH">Produto</th>
+           <th class="linTH">tipo</th>
+           <th class="linTH">descrição</th>
+       
+       </tr>
+            
+            <tr>
+                <th rowspan="2" class="colTH">Sofa 2 lugares</th>
+                
+                <td ><a href="javascript:MostraSofas(1);">Retrátil</a></td>
+                <th class="descTab" rowspan="4">
+
+                    <!--número de lugares / tipo-->
+            <div id="NomeDes">
+                <p></p>
+                <p></p>
+
+<!--imagem ilustrativa  tipo-->
+            <img id="ImgDes" src="ImagensAD2/vazio_150.png" alt="imagem vzia" >
+            </div>
+
+<!--Tecido / Tamanho / Preço-->
+            <div id="PrcDes">
+                <p></p>
+            </div>
+
+                </th>
+            </tr>
+           
+            <tr>
+                <td><a href="javascript:MostraSofas(2);">Sofá-Cama</a> </td>
+            </tr>
+             
+            <tr>
+                <th rowspan="2" class="colTH">sofa 3 lugares </th>
+                <td ><a href="javascript:MostraSofas(3);">Retrátil</a> </td>
+           
+                
+
+            </tr>
+
+            <tr>
+                <td><a href="javascript:MostraSofas(4);">Retrô</a> 
+                </td>
+            </tr>
+
+        </table>
+      
+    </section>
+
+    <script src="Sofas.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOReMI SOlFÁ-móveis</title>
+  
+    <link rel="stylesheet" href="style.css">
+    <script src="cadastro.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Stoke' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <address class="ender">
+            TV. La  Donna e Mobile 134 <br>
+               Tel: (21)21224-4881 <br>
+            <a href="mailto:contato@doremisolfa.com.br"> contato@doremisolfa.com.br</a>
+        </address>
+        <img src="Imagens/DoremisofaLogoTopo.png" alt="DoremisofaLogoTopo" class="imgLogo ">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Apresentação </a></li>
+            <li><a href="Doremi.html">Camas</a></li>
+            <li><a href="Solfa.html">Sofás</a></li>
+            <li><a href="Encomendas.html">Encomendas</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h3 class="titulo">Cadastro</h3>
+
+        <div class="FormBox">
+            <!-- O onsubmit chama a função apenas quando o botão Cadastrar é clicado -->
+            <form method="POST" onsubmit="return verificaSenhas()">
+                
+                <fieldset class="FSLinInteira">
+                    <legend>Identificação</legend>
+
+                    <div class="LinhaForm">
+                        <label for="idEmailGnd" class="LabBox">E-mail:</label>
+                        <input id="idEmailGnd" class="InpBoxGnd" type="email" name="TxtEmail" required />
+                    </div>
+
+                    <div class="LinhaForm">
+                        <span class="ColEsq">
+                            <label for="idSenha" class="LabBox">Senha:</label>
+                            <!-- REMOVIDO o oninput. Agora só valida no clique do botão -->
+                            <input id="idSenha" class="InpBoxMed" type="password" name="TxtSenha" required />
+                        </span>
+
+                        <span class="ColDir">
+                            <label for="idConf" class="LabBox">Confirme:</label>
+                            <!-- REMOVIDO o oninput. Agora só valida no clique do botão -->
+                            <input id="idConf" class="InpBoxMed" type="password" name="TxtConf" required />
+                        </span>
+                    </div>
+                </fieldset>
+
+                <fieldset class="FSLinInteira">
+                    <legend>Dados Pessoais</legend>
+                    <div class="LinhaForm">
+                        <label for="idNome" class="LabBox">Nome:</label>
+                        <input id="idNome" class="InpBoxGnd" type="text" name="TxtNome" required />
+                    </div>
+                    <div class="LinhaForm" id="linhaEnder">
+                        <label class="LabBox">Endereço: </label>
+                        <textarea name="TxtEnder" class="InpBoxGnd" id="inpEnder"></textarea>
+                    </div>
+                    <div class="LinhaForm">
+                        <span class="ColEsq">
+                            <label class="LabBox">Telefone:</label>
+                            <input type="text" class="InpBoxMed" name="TxtTelefone" required />
+                        </span>
+                        <span class="ColDir">
+                            <label class="LabBox">Celular:</label>
+                            <input type="tel" class="InpBoxMed" name="TxtCelular"  />
+                        </span>
+                    </div>
+                    <fieldset class="FSColEsq">
+                        <legend>Nacimento:</legend>
+                        <input type="number" name="TxtDiaNasc" min="1" max="31" class="numDD" /> /
+                        <input type="number" name="TxtMesNasc" min="1" max="12" class="numDD" /> /
+                        <input type="number" name="TxtAnoNasc" value="1980" min="1920" max="2000" class="numQD" />
+                    </fieldset>
+                    <fieldset class="FSColDir">
+                        <legend>Sexo:</legend>
+                        <label><input type="radio" name="TglSexo" value="M" />Mas</label>
+                        <label><input type="radio" name="TglSexo" value="F" />Fem</label>
+                        <label><input type="radio" name="TglSexo" value="O" checked />Outro</label>
+                    </fieldset>
+                </fieldset>
+
+                <div class="botoes">
+                    <input type="submit" value="Cadastrar" />
+                    <input type="reset" value="Limpar" />
+                </div>
+            </form>
+        </div>
+    </section>
+
+    
+</body>
+</html>

@@ -1,0 +1,353 @@
+@charset "UTF-8";
+
+
+/*
+ Estilo de tudo
+*/
+body{
+    background-color: #E6F0B5;
+    color:#E53646;
+    font-size: 16px;
+   font-family: stoke, Lucida Bright, liberation;
+}
+
+a{
+    color: #D53646;
+    text-decoration: none;
+}
+
+a :visited{
+    color: #D53636;
+    text-decoration: none;
+}
+ a:link { color:#D53646; text-decoration:none; } /* não precisa por conta do estilo geral do link (a)*/
+
+ ul{
+    line-height: 200%;
+ }
+
+ ol{ 
+    line-height: 200%;
+ }
+
+ /* 
+ ESTILO DA SECTION DA SEÇÃO DA CAMA(spagina de camas)
+ */
+
+.titulo{
+    text-align: center;
+}
+ .listacama{
+    
+    width: 350px;
+    color: #000066;
+    background-color: #FFFFBB;
+    font-size: 12px;
+    padding: 10px 10px 10px 30px;
+    border: 3px solid #226699;
+    margin: 0px auto 10px auto;
+ }
+
+ ol {
+   list-style-type:lower-roman;
+ }
+
+.listacama ul{
+    list-style-type: square;
+}
+
+.preco{
+    color: #CC0000;
+
+}
+/**
+ESTILO DO HEADER
+*/
+header{
+display: block;
+margin-bottom: 1px;
+}
+
+.ender{
+    float: right;
+    text-align: right; 
+    font-size: 14px;
+    line-height: 140%;
+    font-family: karla, verdana, ubuntu;
+}
+
+
+.imgLogo {
+border-bottom: solid 4px;
+margin-bottom: 6px;
+padding-bottom: 5px;
+
+}
+
+
+/**
+ESTILO DO MENU
+*/
+
+nav{
+    display: block;
+    width: 20%;
+    float: left;
+}
+
+
+nav ul{
+    color: #D53646;
+    line-height: 230%;
+    margin-top: 40px;
+    list-style-type: square;
+}
+
+
+
+
+
+/**
+ESTILO da SECTION 
+*/
+
+section{
+    display: block;
+    width: 60%;
+    float: right;
+  
+}
+
+div.apres{
+    text-align: center;
+    font-size: 16px; /* não precisa pois o texto apresentado ja está na propria foto*/
+}
+
+/* 
+estilos da tabela de sofas(pagina dos sofas)
+*/
+
+section .TabSofa{
+    border-collapse: collapse;
+    font-size: 12px;
+    color: #000066;
+    background-color: #FFFFBB;
+   margin: 5px auto 15px auto;
+   font-family: Stoke, Lucida Bright, liberation;
+}
+
+.imgSofa{
+    width: 100px;
+    height: 62px;
+}
+
+.titulo-tab{
+    color: #FFFFFF;
+    background-color: #228855;
+    font-size: 14px;
+    
+}
+
+.TabSofa .linTH{
+color: #FFFFFF;
+background-color: #22AA55;
+text-align: center;
+vertical-align: middle;
+
+}
+.TabSofa .colTH{
+    color: #FFFFFF;
+    background-color: #2299DD;
+    vertical-align: left;
+    height: 130px;
+    
+}
+
+
+
+
+.TabSofa th,td{
+    border: 3px solid #226699;
+    padding: 6px 12px 6px 12px;
+    height: 30px;
+
+}
+
+
+/* 
+pagina de encomendas 
+*/
+
+/* 
+estilo do formulario
+*/
+ .FormBox{
+    width: 520px;
+    padding: 6px 6px 15px 6px;
+    text-align: center;
+    color:#000066 ;
+    background-color: #FFFFBB;
+    border: solid 3px #226699 ;
+    font-size: 12px;
+    margin: 20px auto 20px auto;
+    font-family: Stoke, Lucida Bright, liberation;
+}
+
+
+/* 
+Fieldsets
+*/
+
+.FSLinInteira {
+width: 490px;
+text-align: left;
+}
+
+.FSColEsq {
+width: 210px;
+float: left;
+text-align: center;
+}
+
+.FSColDir {
+width: 210px;
+float: right;
+text-align: center;
+}
+
+
+/* 
+estilo de cada label e dados
+*/
+.LinhaForm {
+margin: 0px;
+height: 30px;
+padding: 6px 3px 0px 3px;
+}
+
+.ColEsq {
+width: 180px;
+float: left;
+display: block;
+}
+
+.ColDir {
+width: 180px;
+float: right;
+display: block;
+}
+
+.LabBox {
+width: 80px;
+float: left;
+display: block;
+}
+
+.InpBoxGnd {
+width: 384px;
+float: right;
+display: block;
+}
+
+.InpBoxMed {
+width: 80px;
+float: right;
+display: block;
+}
+
+
+/* 
+estilo dos blocos de dados do cartão
+*/
+.numDD { 
+    width:35px;
+ }
+
+.numQD { width:50px;
+ }
+
+.botoes {
+text-align: right;
+margin: 20px 10px 0px 10px;
+}
+
+
+
+
+/* 
+ids atribuidos ao codigo
+*/
+#loginCad {
+     width: 260px; 
+    }
+
+#idEmail { 
+    width: 160px;
+ }
+
+#senhaCad { 
+    width: 180px;
+ }
+
+#lisSelProd {
+     width: 370px; 
+    }
+
+#selProduto {
+     width: 75%;
+     }
+#btnIncluir { 
+    width: 70px; 
+}
+#boxPedidos {
+     height: 100px;
+     }
+#lisPedArea {
+height: 90%;
+width: 100%;
+}
+#fSBandeira {
+width: 80px;
+text-align: left;
+}
+#numCartao {
+width: 350px;
+height: 35px;
+padding-top: 10px;
+}
+
+#valCartao { 
+    width: 230px; 
+    height: 35px;
+ }
+#boxParcel {
+     width: 230px; height: 30px; 
+    }
+
+
+
+
+/*
+Estilo do  Cadastro
+*/
+
+#linhaEnder { height: 50px; }
+#inpEnder { height: 80%; width: 394px; }
+
+
+/*estilo do js da primeira atividade 
+Seção DOReMI
+*/
+
+.apresentacao{
+    text-align: center;  
+}
+
+
+/*estilo do js da primeira atividade 
+Seção SOlFÁ
+*/
+.descTab{
+    width: 300px;
+
+}

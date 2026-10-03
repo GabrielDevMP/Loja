@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOReMI SOlFÁ-móveis</title>
+    <!-- Mantenha seus links de CSS e fontes aqui -->
+        <script src="encomendas.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Stoke' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <address class="ender">
+            TV. La  Donna e Mobile 134 <br>
+               Tel: (21)21224-4881 <br>
+            <a href="mailto:contato@doremisolfa.com.br"> contato@doremisolfa.com.br</a>
+        </address>
+        <img src="Imagens/DoremisofaLogoTopo.png" alt="DoremisofaLogoTopo" class="imgLogo " >
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Apresentação </a></li>
+            <li><a href="Doremi.html">Camas</a></li>
+            <li><a href="Solfa.html">Sofás</a></li>
+            <li><a href="Encomendas.html" >Encomendas</a></li>
+        </ul>
+    </nav>
+
+<section>
+    <h3 class="titulo">Encomendas</h3>
+
+    <!--parte de indentificação-->
+    <div class="FormBox">
+        <form method="POST">
+            <fieldset class="FSLinInteira">
+                <legend>Identificação</legend>
+                <div class="LinhaForm">
+                    <span class="ColEsq" id="loginCad">
+                        <label for="idEmail" class="LabBox">E-mail:</label>
+                        <input type="email" class="InpBoxGnd" id="idEmail" name="TxtEmail" required />
+                    </span>
+                    <span class="ColDir" id="senhaCad">
+                        <label for="idSenha" class="LabBox">Senha:</label>
+                        <input id="idSenha" class="InpBoxMed" type="password" name="TxtSenha" required />
+                    </span>
+                </div>
+                <div class="LinhaForm">
+                    <b><i>Se você ainda não tem cadastro clique <a href="Cadastro.Html">aqui</a></i></b> !
+                </div>
+            </fieldset>
+
+            <!--Parte de lista de compras-->
+            <fieldset class="FSLinInteira">
+                <legend> Lista de Compras</legend>
+
+                <div class="LinhaForm">
+                    <span class="ColEsq" id="lisSelProd">
+                        <label for="selProduto" class="LabBox">Produtos: </label>
+                        <!-- REQUISITO A: O usuário seleciona um produto na lista -->
+                        <!-- Modificado: Adicionado 'value' com o preço de cada produto para facilitar o cálculo -->
+                        <Select name="selProduto" id="selProduto" >
+                            <option value="0"> ----- </option>
+                            
+                            <optgroup label="Cama Solteiro">
+                                <option value="500.00"> Cama solteito Simples 108 x 154 x 210</option>
+                                <option value="650.00">Cama solteiro Bicama 70 x 87 x 193</option>
+                            </optgroup>
+
+                            <optgroup label="Bicama Casal">
+                                <option value="800.00">Cama Casal Simples 104 x 104 x 202</option>
+                                <option value="950.00">Cama Casal com gavetas 48 x 145 x</option>
+                            </optgroup>
+
+                            <optgroup label="Sofá 2 lug.">
+                                <option value="1200.00"> Sofá 2 lugares Retrátil  95 x 87-126 x 180 Linho Cru</option>
+                                <option value="1350.00">Sofá-Cama 95 x 97-150 x 200 Linho</option>
+                            </optgroup>
+
+                            <optgroup label="sofá 3 lug"> 
+                                <option value="1500.00">Sofá 3 Lug. Retrátil 108 x 95-150 x 200 Suede</option>
+                                <option value="1600.00"> Sofá 3 Lug. Retrô 80 x 76 x 196 Veludo</option>
+                            </optgroup>
+                        </select>
+                    </span>
+                    <span class="ColDir" id="btnIncluir">
+                        <!-- REQUISIT B: Ao clicar, o produto é adicionado e o valor somado -->
+                        <!-- Adiciobeu evento onclick para chamar a função JavaScript -->
+                        <input type="button" value="Incluir" onclick="incluirProduto()" />
+                    </span>
+                </div>
+
+                <div class="LinhaForm" id="boxPedidos">
+                    <!-- Área onde a lista de compras será exibida -->
+                    <textarea name="listaPedidos" readonly id="lisPedArea"></textarea>
+                </div>
+
+                <div class="LinhaForm">
+                    <span class="ColDir">
+                        <label class="LabBox" for="TxtTotal">Valor: R$</label>
+                        <!-- Campo que receberá a soma total -->
+                        <input type="text" name="TxtTotal" readonly id="TxtTotal" class="InpBoxMed" value="0" />
+                    </span>
+                </div>
+            </fieldset>
+
+            <!--Dados do Cartão (Mantido original)-->
+            <fieldset class="FSLinInteira">
+                <legend> Dados do Cartão</legend>
+                <fieldset class="FSColDir" id="fSBandeira">
+                    <legend> Bandeira:</legend>
+                    <label><input type="radio" name="RadBand" checked />Visa</label><br/>
+                    <label><input type="radio" name="RadBand" />Master</label><br/>
+                    <label><input type="radio" name="RadBand" />Elo</label>
+                </fieldset>
+
+                <div class="ColEsq" id="numCartao">
+                    <label class="LabBox" for="TxtNumCC01">Número:</label>
+                    <input type="text" name="TxtNumCC01" id="TxtNumCC01" maxlength="4" class="numDD" />
+                    <input type="text" name="TxtNumCC02" class="numDD" maxlength="4" />
+                    <input type="text" name="TxtNumCC03" class="numDD" maxlength="4" /> 
+                    <input type="text" name="TxtNumCC04" class="numDD" maxlength="4" />
+                </div>
+
+                <div class="ColEsq" id="valCartao">
+                    <label class="LabBox" for="mesVal">Validade:</label>
+                    <input type="number" name="TxtMesVal" id="mesVal" min="1" max="12" class="numDD" value="1" /> /
+                    <input type="number" name="TxtAnoVal" value="2022" min="2022" max="2036" class="numQD" />
+                </div>
+
+                <div class="ColEsq" id="boxParcel">
+                    <label class="LabBox" for="numParcel">Parcelas:</label>
+                    <input type="number" name="TxtMesVal" id="numParcel" min="1" max="6" class="numDD" value="1" /> x Sem Juros
+                </div>
+            </fieldset>
+
+         
+            <div class="botoes">
+                <input type="submit" value="Confirmar" />
+                <input type="reset" value="Limpar" />
+            </div>
+        </form> 
+    </div>
+</section>
+
+
+</body>
+</html>

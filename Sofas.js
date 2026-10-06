@@ -1,5 +1,6 @@
+
 var PASTA = "ImagensAD2/";
-var EXT = ".png"; //unica maneira que consegui fazer para funcionar a troca de imagens, pois o src da imagem não estava sendo atualizado corretamente.
+var EXT = ".png"; // fiz isso para funcionar as fotos que não estavam carregando
 
 var tabSofas = [
     // [produto, tipo, arquivo da imagem, tecido, medidas, preço]
@@ -32,7 +33,5 @@ function MostraSofas(ind) {
         "<p><strong>Preço:</strong> R$ <span class='preco'>" +
         s[5].toLocaleString("pt-BR", { minimumFractionDigits: 2 }) +
         "</span></p>";
-} 
-
-
+}
 

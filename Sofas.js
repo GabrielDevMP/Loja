@@ -1,6 +1,6 @@
 
 var PASTA = "ImagensAD2/";
-var EXT = ".png"; // fiz isso para funcionar as fotos que não estavam carregando
+var EXT = ".png"; // unica maneira de alterar a extensão das imagens, caso seja necessário
 
 var tabSofas = [
     // [produto, tipo, arquivo da imagem, tecido, medidas, preço]
